@@ -1,0 +1,1048 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "component": {
+      "type": "application",
+      "name": "High-Deep",
+      "version": "0.1.0"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "3FS",
+      "version": "2dcbff518ea53be75c9702d2736134c021f9643d",
+      "bom-ref": "upstream/distributed/3FS",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/3FS/tree/2dcbff518ea53be75c9702d2736134c021f9643d"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "53dd3523f669ecc638f651407dd7ec36eafe40894ca2e38a9c83c2f70a764f38"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "awesome-deepseek-agent",
+      "version": "9546b8f5c3ed668ec12fce083e32c5b16f1523cb",
+      "bom-ref": "upstream/reference/awesome-deepseek-agent",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/awesome-deepseek-agent/tree/9546b8f5c3ed668ec12fce083e32c5b16f1523cb"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "17f8e6e81d2d14bb0c92fe59dd9eb6dfbadc2172a4ec8937a90921a93d2cda13"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "required"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "awesome-deepseek-coder",
+      "version": "f77c511dae540b950c4a9bb3b6aed4b7b3e2deb4",
+      "bom-ref": "upstream/reference/awesome-deepseek-coder",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/awesome-deepseek-coder/tree/f77c511dae540b950c4a9bb3b6aed4b7b3e2deb4"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "21fa95ea1f5c5b39229b63821192ba81c8164591c1e37414d73d9596655eb8fd"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "required"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "awesome-deepseek-integration",
+      "version": "172dc8b74a0d549f4bce9850f7fe6a25b37a5ac7",
+      "bom-ref": "upstream/reference/awesome-deepseek-integration",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/awesome-deepseek-integration/tree/172dc8b74a0d549f4bce9850f7fe6a25b37a5ac7"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "915dc917c70ab4ffb7e45c648df447f19bd26cf3b61312fcfd8e82486bf10a59"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "chat-demo",
+      "version": "cdf9617c5f265d58e0e1805635b2c10a3d41284d",
+      "bom-ref": "upstream/agents/chat-demo",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/chat-demo/tree/cdf9617c5f265d58e0e1805635b2c10a3d41284d"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "ae84319c46c94337d563997d60566b7f40b36c7a1d3a8d6685df6ca4cec38851"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "clangd-ascend",
+      "version": "f407eca30e07e647ce2e556f9b08e145b65362c7",
+      "bom-ref": "upstream/accelerators/clangd-ascend",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/clangd-ascend/tree/f407eca30e07e647ce2e556f9b08e145b65362c7"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "cbbc6a936c26227b7174e8dac63baab259b6e4d86e80b9b610acd39cc10bae1b"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepEP",
+      "version": "f6aa38fe06cd4a0489e7730365d4e0114970a2f3",
+      "bom-ref": "upstream/accelerators/DeepEP",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepEP/tree/f6aa38fe06cd4a0489e7730365d4e0114970a2f3"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "1c0e674fad6b82e9f565b5877c07efcf587894c20823d97c1e1cc7ec9d34fe1d"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepEP-Ascend",
+      "version": "4dfccac4fc345519427e1019557301c9e59e9c76",
+      "bom-ref": "upstream/accelerators/DeepEP-Ascend",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepEP-Ascend/tree/4dfccac4fc345519427e1019557301c9e59e9c76"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "a03b89d417bfad4cf9b6a2cad4641f480bec1fa0bf2b3901f84d48ef9c999e75"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "required"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepGEMM",
+      "version": "5081f8513af57e61696de4f4f04b0e707ffb503e",
+      "bom-ref": "upstream/accelerators/DeepGEMM",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepGEMM/tree/5081f8513af57e61696de4f4f04b0e707ffb503e"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "4265484dfe26dae53d607bd9112796a629164caf9cef7dd62a87242a91b4d7c5"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepGEMM-Ascend",
+      "version": "3a35326271b069b8b5bf1a754435acd6cc91575b",
+      "bom-ref": "upstream/accelerators/DeepGEMM-Ascend",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepGEMM-Ascend/tree/3a35326271b069b8b5bf1a754435acd6cc91575b"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "df7a3731cfb1b54e642e9cde7b3cfab056f46b0ae84c6447030d409a4a11d601"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepInfer",
+      "version": "a679bb86ce36e883a98a97733492b686e5b9a08e",
+      "bom-ref": "upstream/inference/DeepInfer",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepInfer/tree/a679bb86ce36e883a98a97733492b686e5b9a08e"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "223943b631a43baa8afdf89b820c8dbceb017b5fc7064600ec3dd062cb911f9c"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepJIT",
+      "version": "c1d103f455beace5b3d79f94581acbd88877f1e7",
+      "bom-ref": "upstream/inference/DeepJIT",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepJIT/tree/c1d103f455beace5b3d79f94581acbd88877f1e7"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "d7d7568a1b98f5fcaedad241c23aabc35c59068eebf940aa7c83d2432c8bdabb"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepSeek-Coder",
+      "version": "2f9fd85927c669dae3c0fbb2d607274023af243e",
+      "bom-ref": "upstream/models/DeepSeek-Coder",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepSeek-Coder/tree/2f9fd85927c669dae3c0fbb2d607274023af243e"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "7e8775d035b8fb9da6cd012b4e7941c7d85f534c55a5303cc23523c14d050c93"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepSeek-Coder-V2",
+      "version": "a2b4e0a25b5dab1ee87e8080f76e4512b0725b7b",
+      "bom-ref": "upstream/models/DeepSeek-Coder-V2",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepSeek-Coder-V2/tree/a2b4e0a25b5dab1ee87e8080f76e4512b0725b7b"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "ffc2852c6873ace62e17a3e58094c26f1f7d4f040517f0e051a353e77d4fb31b"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "deepseek-harness",
+      "version": "4b399c39a6d1479cd84ca591b4d7c88e24d38a96",
+      "bom-ref": "upstream/agents/deepseek-harness",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/tree/4b399c39a6d1479cd84ca591b4d7c88e24d38a96"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "6a9e10cc467dcd3c416d94f4833b2369caa9b223ee515c8c401d4c0ad2a15ec6"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepSeek-LLM",
+      "version": "6712a86bfb7dd25c73383c5ad2eb7a8db540258b",
+      "bom-ref": "upstream/models/DeepSeek-LLM",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepSeek-LLM/tree/6712a86bfb7dd25c73383c5ad2eb7a8db540258b"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "7037150a333f0b0d21bb2e40db3df0444e5b0162283fd60b7e3ca701db50d6ff"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepSeek-Math",
+      "version": "b8b0f8ce093d80bf8e9a641e44142f06d092c305",
+      "bom-ref": "upstream/reasoning/DeepSeek-Math",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepSeek-Math/tree/b8b0f8ce093d80bf8e9a641e44142f06d092c305"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "f3f872df31214e4373523dbb03f66e652c814297902efe2e83186cb527a40113"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepSeek-Math-V2",
+      "version": "665c840782baf7faae8a8b244ea313f3cfcc346f",
+      "bom-ref": "upstream/reasoning/DeepSeek-Math-V2",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepSeek-Math-V2/tree/665c840782baf7faae8a8b244ea313f3cfcc346f"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "a1030075df21d33b3dc7cc06834f62bd72f07a2624ff79c094b5cf9aa4ec588f"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepSeek-MoE",
+      "version": "66edeee5a4f75cbd76e0316229ad101805a90e01",
+      "bom-ref": "upstream/models/DeepSeek-MoE",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepSeek-MoE/tree/66edeee5a4f75cbd76e0316229ad101805a90e01"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "36b89bb52852182ee586669b3486a7c8e63d8b28c6bcd17dc746072fa975fac2"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepSeek-OCR",
+      "version": "09eaf526153e7a01ed16c9dea8c96282aaea29c0",
+      "bom-ref": "upstream/multimodal/DeepSeek-OCR",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepSeek-OCR/tree/09eaf526153e7a01ed16c9dea8c96282aaea29c0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "ed19871a592315e8415af102ea0d8ff203f853d5b872ae1bd214e9dd31462ee0"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepSeek-OCR-2",
+      "version": "2f3699ebbb96fa8af32212e8c170f2cc28730fad",
+      "bom-ref": "upstream/multimodal/DeepSeek-OCR-2",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepSeek-OCR-2/tree/2f3699ebbb96fa8af32212e8c170f2cc28730fad"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "f03f13dbe22df7e342d7a915b13a0b2441f825091aaf6f016b3ad146737eaad4"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepSeek-Prover-V1.5",
+      "version": "2c4ba9119eef74d0d611f494261b2c5bae98c69a",
+      "bom-ref": "upstream/reasoning/DeepSeek-Prover-V1.5",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepSeek-Prover-V1.5/tree/2c4ba9119eef74d0d611f494261b2c5bae98c69a"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "382b354433572edee5215a3db81d09f543556152d671484c535f8fea0d7699ff"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepSeek-Prover-V2",
+      "version": "e598a57ea3284997d4a2a168a069fdd5064afbc8",
+      "bom-ref": "upstream/reasoning/DeepSeek-Prover-V2",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepSeek-Prover-V2/tree/e598a57ea3284997d4a2a168a069fdd5064afbc8"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "6832a25cecb02e4da2ff1441472faf9650c6fdb9c811a2f88fcfff212595d920"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepSeek-R1",
+      "version": "0cf78561f1d51c84a21b2190626b21116d5c68bb",
+      "bom-ref": "upstream/models/DeepSeek-R1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepSeek-R1/tree/0cf78561f1d51c84a21b2190626b21116d5c68bb"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "b3c55f618f1849b56fde571b4c365d697d9853a29c429b76278101a4bded845a"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "deepseek-recipe",
+      "version": "935817c66f5d6e64838f419692545f06787e485f",
+      "bom-ref": "upstream/inference/deepseek-recipe",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/deepseek-recipe/tree/935817c66f5d6e64838f419692545f06787e485f"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "bf40407077c893ba51dcfe2d015c457198cff8c9f01923fcbad4b11acd01e9cc"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepSeek-V2",
+      "version": "ec98ee3cbffc32104cd55dba8af884b3d772602a",
+      "bom-ref": "upstream/models/DeepSeek-V2",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepSeek-V2/tree/ec98ee3cbffc32104cd55dba8af884b3d772602a"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "06cd9098de9a8292c55113aa0abaa7f0c83b1e496e3dcbf24b1ad155c63b0214"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepSeek-V3",
+      "version": "9b4e9788e4a3a731f7567338ed15d3ec549ce03b",
+      "bom-ref": "upstream/models/DeepSeek-V3",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepSeek-V3/tree/9b4e9788e4a3a731f7567338ed15d3ec549ce03b"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "bdcccb648680aecd23fe60fa03cd1a70d570c13676c3f27e66339d7967c128bf"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepSeek-V3.2-Exp",
+      "version": "87e509a2e5a100d221c97df52c6e8be7835f0057",
+      "bom-ref": "upstream/models/DeepSeek-V3.2-Exp",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepSeek-V3.2-Exp/tree/87e509a2e5a100d221c97df52c6e8be7835f0057"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "e4e4d92a43245425f4ebe8481f9ceaa86495c90b85cd23644b77220053e59ba1"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepSeek-VL",
+      "version": "681bffb4519856ad27cc17531aacde31ddf6f1a7",
+      "bom-ref": "upstream/multimodal/DeepSeek-VL",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepSeek-VL/tree/681bffb4519856ad27cc17531aacde31ddf6f1a7"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "bddfb0545f29bf7d8ca36f45d65de89489afaff622d3d1f64adea634ac5b6c6d"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepSeek-VL2",
+      "version": "ef9f91e2b6426536b83294c11742c27be66361b1",
+      "bom-ref": "upstream/multimodal/DeepSeek-VL2",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepSeek-VL2/tree/ef9f91e2b6426536b83294c11742c27be66361b1"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "97a190826396281a94da10c956042b7e767b99a692ac83e27c2f56b7e761c62d"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepSelect",
+      "version": "bfa4507d935f17ebfc3d0f00ff7d3c9a4d0e5c18",
+      "bom-ref": "upstream/inference/DeepSelect",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepSelect/tree/bfa4507d935f17ebfc3d0f00ff7d3c9a4d0e5c18"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "0b67a13206da590b09b2000c72fe9f3a671d6fffa624d12ab7f14d6c356cb67a"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DeepSpec",
+      "version": "005e03b81cec38b7da6399833d609ee89a2587f2",
+      "bom-ref": "upstream/inference/DeepSpec",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DeepSpec/tree/005e03b81cec38b7da6399833d609ee89a2587f2"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "7b3bcdb7fabc0f44b1d14fcc05696ef9c7ecce6455762e90d61c4445e1afbec4"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DreamCraft3D",
+      "version": "5829ef116d36c871ce2b9e54a6153dd3856a1561",
+      "bom-ref": "upstream/multimodal/DreamCraft3D",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DreamCraft3D/tree/5829ef116d36c871ce2b9e54a6153dd3856a1561"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "78078d20ceac01549d4d0a6c752c3a4053f9f54b6205c367e4906ef01f938112"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "dsh-libreoffice-kit",
+      "version": "b19bb73c74ed893b8a5d1716d32df32a113ed31b",
+      "bom-ref": "upstream/agents/dsh-libreoffice-kit",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/dsh-libreoffice-kit/tree/b19bb73c74ed893b8a5d1716d32df32a113ed31b"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "8973b51a3f94dad8b125cc4d754d6d1f0f53108da83e166eb63bf0243d197220"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "dsh-node-addon-require-builtin",
+      "version": "a58d3599a2e551d7d706d1ff796c9fd4bbaff63c",
+      "bom-ref": "upstream/agents/dsh-node-addon-require-builtin",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/dsh-node-addon-require-builtin/tree/a58d3599a2e551d7d706d1ff796c9fd4bbaff63c"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "9f323fd1128c2380e0f57041f06c0bd649f7421bcb2db0190adc55ad8438c4d9"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "dsh-superagent-prototype",
+      "version": "8c32a9dc5d72c033816c6a8110b37f40cf94fba4",
+      "bom-ref": "upstream/agents/dsh-superagent-prototype",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/tree/8c32a9dc5d72c033816c6a8110b37f40cf94fba4"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "f05b534f0c863f82d19a7be7dd36079f5e66060c9172d5d05d4ad27af91ca3cd"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DualPipe",
+      "version": "030ce4325f4ebeb437da4ebc6d00a70469dd58ae",
+      "bom-ref": "upstream/distributed/DualPipe",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/DualPipe/tree/030ce4325f4ebeb437da4ebc6d00a70469dd58ae"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "2e2c3d76b4d3db6c21f377169b17c9394f8a81c143f9a6c646e2b4209803ddf3"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "Engram",
+      "version": "fb7f84a21f91223715394a33a1dc24bbfb7f788e",
+      "bom-ref": "upstream/inference/Engram",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/Engram/tree/fb7f84a21f91223715394a33a1dc24bbfb7f788e"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "08dc3966992479ae62cf76578b30c9d27d6abb687b76757815e99480a1133a89"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "EPLB",
+      "version": "d52c72d5b2f2fb4c41afbf8eb21366820239913d",
+      "bom-ref": "upstream/distributed/EPLB",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/EPLB/tree/d52c72d5b2f2fb4c41afbf8eb21366820239913d"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "d61a1308ae0c3a7a235bfd526c2282c178f80de9ed938f338219379e86b4f256"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ESFT",
+      "version": "3746ca74410c92163cc521571dbd17579bfdc962",
+      "bom-ref": "upstream/distributed/ESFT",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/ESFT/tree/3746ca74410c92163cc521571dbd17579bfdc962"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "3586f1f19d7b81908818098d78edeafce7e1e6ab291a5c00a28274433369b003"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "FlashMLA",
+      "version": "395cb3afbb331fef7b1b21e9340861b9436b42d8",
+      "bom-ref": "upstream/accelerators/FlashMLA",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/FlashMLA/tree/395cb3afbb331fef7b1b21e9340861b9436b42d8"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "b91d10027d3e1b896629c00736c7ae07e584d9cc6e2197aa53b1c312654a6c85"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "Janus",
+      "version": "1daa72fa409002d40931bd7b36a9280362469ead",
+      "bom-ref": "upstream/multimodal/Janus",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/Janus/tree/1daa72fa409002d40931bd7b36a9280362469ead"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "d4dc7b621955f673fe1525ced1e35561956313b727c58e74d64cb5c1b6e815f9"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "LPLB",
+      "version": "0490f79452f7ef277e814449600b1b1dd4c663b3",
+      "bom-ref": "upstream/distributed/LPLB",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/LPLB/tree/0490f79452f7ef277e814449600b1b1dd4c663b3"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "c3b0ec774b36ae55c62fc8a26fa50a3992fb8b434bc727465763b0df3e47fd59"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "open-infra-index",
+      "version": "56d86855fcf6e08fdfd45ce6280bd24322c93351",
+      "bom-ref": "upstream/reference/open-infra-index",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/open-infra-index/tree/56d86855fcf6e08fdfd45ce6280bd24322c93351"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "24958563ed6f4006b0848afe58f32444af56c721f20ab38c6477065f163c0d51"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "profile-data",
+      "version": "449602428a1b023acb8a505d4f34fef536535db6",
+      "bom-ref": "upstream/reference/profile-data",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/profile-data/tree/449602428a1b023acb8a505d4f34fef536535db6"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "2a9508454d481c8056a8a8be1655e44e0563fbd14cca72f37049db2d8ac4b868"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "required"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "smallpond",
+      "version": "52ecc5e45535c7448f848bcb45b0da00d9484f81",
+      "bom-ref": "upstream/distributed/smallpond",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/smallpond/tree/52ecc5e45535c7448f848bcb45b0da00d9484f81"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "031f09de4f8f78e363251eae03edfaf001ff7e59958065c15fd002bc5f296fe0"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "TileKernels",
+      "version": "c1cf914a82e6901c679445f872051ce44ac2cc63",
+      "bom-ref": "upstream/accelerators/TileKernels",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/deepseek-ai/TileKernels/tree/c1cf914a82e6901c679445f872051ce44ac2cc63"
+        }
+      ],
+      "properties": [
+        {
+          "name": "highdeep:archive-sha256",
+          "value": "8f55cd4898b8c96b9fc1a2403aef0431b98dc0f76cb52808e2bf6095eebb7a39"
+        },
+        {
+          "name": "highdeep:license-review",
+          "value": "root_notices_present_not_legally_reviewed"
+        }
+      ]
+    }
+  ]
+}

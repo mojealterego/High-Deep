@@ -1,0 +1,141 @@
+[submodule "upstream/distributed/3FS"]
+	path = upstream/distributed/3FS
+	url = https://github.com/deepseek-ai/3FS.git
+[submodule "upstream/reference/awesome-deepseek-agent"]
+	path = upstream/reference/awesome-deepseek-agent
+	url = https://github.com/deepseek-ai/awesome-deepseek-agent.git
+[submodule "upstream/reference/awesome-deepseek-coder"]
+	path = upstream/reference/awesome-deepseek-coder
+	url = https://github.com/deepseek-ai/awesome-deepseek-coder.git
+[submodule "upstream/reference/awesome-deepseek-integration"]
+	path = upstream/reference/awesome-deepseek-integration
+	url = https://github.com/deepseek-ai/awesome-deepseek-integration.git
+[submodule "upstream/agents/chat-demo"]
+	path = upstream/agents/chat-demo
+	url = https://github.com/deepseek-ai/chat-demo.git
+[submodule "upstream/accelerators/clangd-ascend"]
+	path = upstream/accelerators/clangd-ascend
+	url = https://github.com/deepseek-ai/clangd-ascend.git
+[submodule "upstream/accelerators/DeepEP"]
+	path = upstream/accelerators/DeepEP
+	url = https://github.com/deepseek-ai/DeepEP.git
+[submodule "upstream/accelerators/DeepEP-Ascend"]
+	path = upstream/accelerators/DeepEP-Ascend
+	url = https://github.com/deepseek-ai/DeepEP-Ascend.git
+[submodule "upstream/accelerators/DeepGEMM"]
+	path = upstream/accelerators/DeepGEMM
+	url = https://github.com/deepseek-ai/DeepGEMM.git
+[submodule "upstream/accelerators/DeepGEMM-Ascend"]
+	path = upstream/accelerators/DeepGEMM-Ascend
+	url = https://github.com/deepseek-ai/DeepGEMM-Ascend.git
+[submodule "upstream/inference/DeepInfer"]
+	path = upstream/inference/DeepInfer
+	url = https://github.com/deepseek-ai/DeepInfer.git
+[submodule "upstream/inference/DeepJIT"]
+	path = upstream/inference/DeepJIT
+	url = https://github.com/deepseek-ai/DeepJIT.git
+[submodule "upstream/models/DeepSeek-Coder"]
+	path = upstream/models/DeepSeek-Coder
+	url = https://github.com/deepseek-ai/DeepSeek-Coder.git
+[submodule "upstream/models/DeepSeek-Coder-V2"]
+	path = upstream/models/DeepSeek-Coder-V2
+	url = https://github.com/deepseek-ai/DeepSeek-Coder-V2.git
+[submodule "upstream/agents/deepseek-harness"]
+	path = upstream/agents/deepseek-harness
+	url = https://github.com/deepseek-ai/deepseek-harness.git
+[submodule "upstream/models/DeepSeek-LLM"]
+	path = upstream/models/DeepSeek-LLM
+	url = https://github.com/deepseek-ai/DeepSeek-LLM.git
+[submodule "upstream/reasoning/DeepSeek-Math"]
+	path = upstream/reasoning/DeepSeek-Math
+	url = https://github.com/deepseek-ai/DeepSeek-Math.git
+[submodule "upstream/reasoning/DeepSeek-Math-V2"]
+	path = upstream/reasoning/DeepSeek-Math-V2
+	url = https://github.com/deepseek-ai/DeepSeek-Math-V2.git
+[submodule "upstream/models/DeepSeek-MoE"]
+	path = upstream/models/DeepSeek-MoE
+	url = https://github.com/deepseek-ai/DeepSeek-MoE.git
+[submodule "upstream/multimodal/DeepSeek-OCR"]
+	path = upstream/multimodal/DeepSeek-OCR
+	url = https://github.com/deepseek-ai/DeepSeek-OCR.git
+[submodule "upstream/multimodal/DeepSeek-OCR-2"]
+	path = upstream/multimodal/DeepSeek-OCR-2
+	url = https://github.com/deepseek-ai/DeepSeek-OCR-2.git
+[submodule "upstream/reasoning/DeepSeek-Prover-V1.5"]
+	path = upstream/reasoning/DeepSeek-Prover-V1.5
+	url = https://github.com/deepseek-ai/DeepSeek-Prover-V1.5.git
+[submodule "upstream/reasoning/DeepSeek-Prover-V2"]
+	path = upstream/reasoning/DeepSeek-Prover-V2
+	url = https://github.com/deepseek-ai/DeepSeek-Prover-V2.git
+[submodule "upstream/models/DeepSeek-R1"]
+	path = upstream/models/DeepSeek-R1
+	url = https://github.com/deepseek-ai/DeepSeek-R1.git
+[submodule "upstream/inference/deepseek-recipe"]
+	path = upstream/inference/deepseek-recipe
+	url = https://github.com/deepseek-ai/deepseek-recipe.git
+[submodule "upstream/models/DeepSeek-V2"]
+	path = upstream/models/DeepSeek-V2
+	url = https://github.com/deepseek-ai/DeepSeek-V2.git
+[submodule "upstream/models/DeepSeek-V3"]
+	path = upstream/models/DeepSeek-V3
+	url = https://github.com/deepseek-ai/DeepSeek-V3.git
+[submodule "upstream/models/DeepSeek-V3.2-Exp"]
+	path = upstream/models/DeepSeek-V3.2-Exp
+	url = https://github.com/deepseek-ai/DeepSeek-V3.2-Exp.git
+[submodule "upstream/multimodal/DeepSeek-VL"]
+	path = upstream/multimodal/DeepSeek-VL
+	url = https://github.com/deepseek-ai/DeepSeek-VL.git
+[submodule "upstream/multimodal/DeepSeek-VL2"]
+	path = upstream/multimodal/DeepSeek-VL2
+	url = https://github.com/deepseek-ai/DeepSeek-VL2.git
+[submodule "upstream/inference/DeepSelect"]
+	path = upstream/inference/DeepSelect
+	url = https://github.com/deepseek-ai/DeepSelect.git
+[submodule "upstream/inference/DeepSpec"]
+	path = upstream/inference/DeepSpec
+	url = https://github.com/deepseek-ai/DeepSpec.git
+[submodule "upstream/multimodal/DreamCraft3D"]
+	path = upstream/multimodal/DreamCraft3D
+	url = https://github.com/deepseek-ai/DreamCraft3D.git
+[submodule "upstream/agents/dsh-libreoffice-kit"]
+	path = upstream/agents/dsh-libreoffice-kit
+	url = https://github.com/deepseek-ai/dsh-libreoffice-kit.git
+[submodule "upstream/agents/dsh-node-addon-require-builtin"]
+	path = upstream/agents/dsh-node-addon-require-builtin
+	url = https://github.com/deepseek-ai/dsh-node-addon-require-builtin.git
+[submodule "upstream/agents/dsh-superagent-prototype"]
+	path = upstream/agents/dsh-superagent-prototype
+	url = https://github.com/deepseek-ai/dsh-superagent-prototype.git
+[submodule "upstream/distributed/DualPipe"]
+	path = upstream/distributed/DualPipe
+	url = https://github.com/deepseek-ai/DualPipe.git
+[submodule "upstream/inference/Engram"]
+	path = upstream/inference/Engram
+	url = https://github.com/deepseek-ai/Engram.git
+[submodule "upstream/distributed/EPLB"]
+	path = upstream/distributed/EPLB
+	url = https://github.com/deepseek-ai/EPLB.git
+[submodule "upstream/distributed/ESFT"]
+	path = upstream/distributed/ESFT
+	url = https://github.com/deepseek-ai/ESFT.git
+[submodule "upstream/accelerators/FlashMLA"]
+	path = upstream/accelerators/FlashMLA
+	url = https://github.com/deepseek-ai/FlashMLA.git
+[submodule "upstream/multimodal/Janus"]
+	path = upstream/multimodal/Janus
+	url = https://github.com/deepseek-ai/Janus.git
+[submodule "upstream/distributed/LPLB"]
+	path = upstream/distributed/LPLB
+	url = https://github.com/deepseek-ai/LPLB.git
+[submodule "upstream/reference/open-infra-index"]
+	path = upstream/reference/open-infra-index
+	url = https://github.com/deepseek-ai/open-infra-index.git
+[submodule "upstream/reference/profile-data"]
+	path = upstream/reference/profile-data
+	url = https://github.com/deepseek-ai/profile-data.git
+[submodule "upstream/distributed/smallpond"]
+	path = upstream/distributed/smallpond
+	url = https://github.com/deepseek-ai/smallpond.git
+[submodule "upstream/accelerators/TileKernels"]
+	path = upstream/accelerators/TileKernels
+	url = https://github.com/deepseek-ai/TileKernels.git
