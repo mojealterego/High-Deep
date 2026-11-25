@@ -21,3 +21,14 @@ python3 -m highdeep run --config backends.json --capability reasoning --max-toke
 The control plane uses only Python 3.10+ standard library. The adapter implements non-streaming OpenAI-compatible chat completions. Hardware labels describe configured backends, not verified accelerator support. Configuration is trusted operator input; do not accept it from remote clients. No redirects, dynamic tools or shell execution. Per-socket timeout is not a strict overall request deadline. Do not expose this CLI directly as a multi-tenant service.
 
 See docs/ROADMAP.md and docs/source-bom.cdx.json. The latter inventories pinned source projects, not their resolved transitive dependencies.
+
+## Durable queue
+
+```sh
+python3 -m highdeep submit --db jobs.db --tenant local --key example-1 "Solve 2+2"
+python3 -m highdeep work --db jobs.db --tenant local --worker local-1 --config backends.json
+# Use the job identifier printed by submit:
+python3 -m highdeep status --db jobs.db --tenant local JOB_ID
+```
+
+The SQLite queue provides atomic claims, tenant-scoped idempotency, bounded attempts after lease expiration, and fenced completion. Worker processes can execute concurrently. Tenant identifiers are operator-supplied, not authenticated identities; do not expose this to untrusted callers. Crash recovery is at-least-once execution, not exactly-once external inference. Store the database on a local filesystem with restrictive permissions; payloads and results are not encrypted by this module. Explicit inference failures are terminal, and expired claims are recovered on subsequent polling.

@@ -10,3 +10,5 @@
 - G09: reproducible release, security evidence and deployment verification; OPEN.
 
 No automatic claim of faster inference, better reasoning, or improved model weights. Source references are not equivalent to runtime integration. Use a hardware-specific environment for each native project rather than merging incompatible toolchains. Do not run upstream build scripts before review.
+
+G06 partial: SQLite durable queue, worker, idempotent submission, tenant-key scoping and fenced lease recovery implemented. Authentication, sandbox, DAG, distributed state and end-to-end tool authorization remain OPEN.
