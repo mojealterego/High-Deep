@@ -49,6 +49,8 @@ class JobStore:
             db.close()
     def submit(self,tenant,key,payload,*,now,max_attempts=3):
         _label(tenant); _label(key); _time(now)
+        if key.startswith('workflow:'):
+            raise ValueError('Reserved job key namespace')
         if type(max_attempts) is not int or not 1 <= max_attempts <= 10:
             raise ValueError('Invalid retry budget')
         value=_json(payload)

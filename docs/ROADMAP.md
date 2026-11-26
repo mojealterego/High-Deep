@@ -12,3 +12,10 @@
 No automatic claim of faster inference, better reasoning, or improved model weights. Source references are not equivalent to runtime integration. Use a hardware-specific environment for each native project rather than merging incompatible toolchains. Do not run upstream build scripts before review.
 
 G06 partial: SQLite durable queue, worker, idempotent submission, tenant-key scoping and fenced lease recovery implemented. Authentication, sandbox, DAG, distributed state and end-to-end tool authorization remain OPEN.
+
+G06 update: durable DAG definitions and state, topological validation, bounded
+step count and requested generation-token reservation, atomic enqueue/binding,
+dependency failure propagation, exact-match gates, fail-closed lease expiry,
+and CLI reconciliation/status implemented. Local test evidence covers restart
+and concurrent scheduling. Tool authorization, semantic/formal verification,
+distributed execution, authenticated tenancy and sandbox remain OPEN.

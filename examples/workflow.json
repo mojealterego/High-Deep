@@ -1,0 +1,5 @@
+[
+  {"id":"draft","capability":"reasoning","prompt":"Explain why 2+2=4 in one sentence.","max_tokens":64},
+  {"id":"review","depends_on":["draft"],"capability":"math","prompt":"Review the dependency output and return exactly PASS only if its arithmetic is correct; otherwise return FAIL.","max_tokens":16,"expected":"PASS"},
+  {"id":"summary","depends_on":["draft","review"],"capability":"chat","prompt":"Summarize the verified result in one sentence.","max_tokens":64}
+]

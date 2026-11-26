@@ -32,3 +32,29 @@ python3 -m highdeep status --db jobs.db --tenant local JOB_ID
 ```
 
 The SQLite queue provides atomic claims, tenant-scoped idempotency, bounded attempts after lease expiration, and fenced completion. Worker processes can execute concurrently. Tenant identifiers are operator-supplied, not authenticated identities; do not expose this to untrusted callers. Crash recovery is at-least-once execution, not exactly-once external inference. Store the database on a local filesystem with restrictive permissions; payloads and results are not encrypted by this module. Explicit inference failures are terminal, and expired claims are recovered on subsequent polling.
+
+## Durable workflow orchestration
+
+Run a bounded dependency graph using the same queue and worker:
+
+```sh
+FLOW=$(python3 -m highdeep flow-submit --db jobs.db --tenant local --key math-1 --budget 144 --plan examples/workflow.json)
+python3 -m highdeep flow-tick --db jobs.db --tenant local "$FLOW"
+python3 -m highdeep work --db jobs.db --tenant local --worker local-1 --config backends.json
+python3 -m highdeep flow-tick --db jobs.db --tenant local "$FLOW"
+python3 -m highdeep flow-status --db jobs.db --tenant local "$FLOW"
+```
+
+Repeat tick and worker polling until the workflow reaches succeeded or failed.
+Workflow graphs contain at most 32 steps. Each node is scheduled atomically with
+its queue record, after all dependencies succeed. Failed dependencies block
+descendants; independent branches can finish. Exact-match output gates are
+deterministic acceptance checks, not mathematical proofs or guarantees of
+semantic correctness. Dependency text is serialized as untrusted data, but
+this does not eliminate prompt injection. No tool execution is enabled.
+The budget bounds requested generation tokens across workflow nodes, not input
+tokens, actual backend usage or billing. Workflow jobs have one lease attempt;
+an expired running job fails closed. This deliberately avoids automatic repeated
+external inference. SQLite transactions provide local persistence, not
+distributed consensus. Tenant labels still require an external authentication
+boundary. The operator runs reconciliation and workers; no daemon is installed.
