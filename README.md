@@ -58,3 +58,28 @@ an expired running job fails closed. This deliberately avoids automatic repeated
 external inference. SQLite transactions provide local persistence, not
 distributed consensus. Tenant labels still require an external authentication
 boundary. The operator runs reconciliation and workers; no daemon is installed.
+
+## Adaptive inference routing
+
+An operator can opt into a bounded batch of queue executions with a shared
+process-local circuit breaker:
+
+```sh
+python3 -m highdeep work-batch --db jobs.db --tenant local --worker local-1 \
+  --config backends.json --max-jobs 100 --failure-threshold 3 --cooldown 30
+```
+
+The executor filters by capability, generation-token limit, circuit state and
+capacity, then ranks eligible backends by configured priority, in-flight count,
+EWMA response latency and name. The circuit states are closed, open and
+half-open (one recovery probe at a time). In-flight responses from an older
+circuit epoch cannot close a circuit opened by a newer failure. Metrics contain
+backend labels, counters and EWMA latency, not request content or credentials.
+
+The batch worker is sequential; applications embedding AdaptiveExecutor can
+share it across threads. Circuit state and concurrency bounds are per executor
+instance, not per cluster, and reset at process exit. Backends are trusted
+operator configuration: do not mix providers with incompatible data-handling
+policies. A failed request is not automatically replayed; a later independent
+job may be routed elsewhere. If no backend is available the existing worker
+marks that job failed. The metrics do not measure actual tokens or GPU usage.

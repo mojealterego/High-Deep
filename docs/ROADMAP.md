@@ -19,3 +19,10 @@ dependency failure propagation, exact-match gates, fail-closed lease expiry,
 and CLI reconciliation/status implemented. Local test evidence covers restart
 and concurrent scheduling. Tool authorization, semantic/formal verification,
 distributed execution, authenticated tenancy and sandbox remain OPEN.
+
+G02/G08 update: optional adaptive execution with process-local circuit breaker,
+exclusive half-open probes, epoch fencing, per-backend concurrency bounds,
+EWMA latency and content-free counters; bounded batch CLI integrated with
+durable queue. Local HTTP failure/alternate-backend regression and concurrent
+circuit tests added. Shared cross-process breaker state, admission queues,
+authenticated provider policy and real model performance benchmarks remain OPEN.

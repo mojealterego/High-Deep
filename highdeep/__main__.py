@@ -3,6 +3,7 @@ from pathlib import Path
 from .core import Backend, Registry, Request, Router, HttpAdapter, RouteError
 from .jobs import JobStore, Conflict
 from .worker import Worker
+from .adaptive import AdaptiveExecutor
 from .workflows import WorkflowEngine
 
 def load_router(path):
@@ -34,6 +35,14 @@ def main():
             cmd.add_argument('--worker',required=True)
         else:
             cmd.add_argument('job')
+    batch=subs.add_parser('work-batch')
+    batch.add_argument('--db',type=Path,required=True)
+    batch.add_argument('--tenant',required=True)
+    batch.add_argument('--worker',required=True)
+    batch.add_argument('--config',type=Path,required=True)
+    batch.add_argument('--max-jobs',type=int,default=100)
+    batch.add_argument('--failure-threshold',type=int,default=3)
+    batch.add_argument('--cooldown',type=float,default=30)
     for name in ('flow-submit','flow-tick','flow-status'):
         cmd=subs.add_parser(name)
         cmd.add_argument('--db',type=Path,required=True)
@@ -58,6 +67,20 @@ def main():
         elif args.command=='work':
             job=Worker(JobStore(args.db),load_router(args.config),HttpAdapter()).run_once(args.tenant,args.worker)
             print(json.dumps({'job':job}))
+        elif args.command=='work-batch':
+            if not 1 <= args.max_jobs <= 10000:
+                raise ValueError('Invalid batch size')
+            router=load_router(args.config)
+            adapter=HttpAdapter()
+            executor=AdaptiveExecutor(router.backends,adapter,
+                failure_threshold=args.failure_threshold,cooldown=args.cooldown)
+            worker=Worker(JobStore(args.db),router,adapter,executor=executor)
+            processed=0
+            while processed < args.max_jobs:
+                if worker.run_once(args.tenant,args.worker) is None:
+                    break
+                processed+=1
+            print(json.dumps({'processed':processed,'backends':executor.metrics()},indent=2))
         elif args.command.startswith('flow-'):
             engine=WorkflowEngine(JobStore(args.db))
             if args.command=='flow-submit':
