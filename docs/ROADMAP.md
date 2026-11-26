@@ -26,3 +26,19 @@ EWMA latency and content-free counters; bounded batch CLI integrated with
 durable queue. Local HTTP failure/alternate-backend regression and concurrent
 circuit tests added. Shared cross-process breaker state, admission queues,
 authenticated provider policy and real model performance benchmarks remain OPEN.
+
+## Stages v0.4–v0.6
+- v0.4 Memory Fabric: persistent lexical retrieval, episodic records, typed graph
+  links, bounded context export and opt-in inference integration implemented.
+  Learned embeddings, native Engram and distributed memory remain OPEN.
+- v0.5 Symbolic Engine: restricted exact-rational interpreter and workflow
+  acceptance gate implemented. General SMT/Lean proof verification remains OPEN.
+- v0.6 Evolution Engine: measured replay collection, per-case non-regression,
+  paired latency gating, configuration-bound policy promotion with CAS and
+  local hash chain, optional batch activation implemented. Signed/anchored
+  evidence, external holdout governance, code evolution and weight training
+  remain OPEN.
+
+Validation: 69 local tests pass (44 baseline + 25 new). Includes subprocess CLI,
+SQLite persistence and real local HTTP protocol fixtures. No real accelerator
+or model-quality benchmark was run. Native upstream suites remain separate.

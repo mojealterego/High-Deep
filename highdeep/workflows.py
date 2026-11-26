@@ -3,6 +3,7 @@ import json
 import re
 import uuid
 from .core import Request
+from .symbolic import evaluate, verify_answer
 from .jobs import Conflict, _json, _label, _time
 
 _CAPABILITIES = frozenset(('chat', 'code', 'math', 'reasoning'))
@@ -17,7 +18,7 @@ def _validate(steps, budget):
         raise ValueError('Workflow must contain 1–32 steps')
     nodes = {}
     for step in steps:
-        if not isinstance(step, dict) or not {'id','capability','prompt','max_tokens'} <= step.keys() or step.keys() - {'id','capability','prompt','max_tokens','depends_on','expected'}:
+        if not isinstance(step, dict) or not {'id','capability','prompt','max_tokens'} <= step.keys() or step.keys() - {'id','capability','prompt','max_tokens','depends_on','expected','rational_expected'}:
             raise ValueError('Invalid workflow step fields')
         name = step['id']
         if not isinstance(name,str) or not _ID.fullmatch(name) or name in nodes:
@@ -34,6 +35,10 @@ def _validate(steps, budget):
             if not isinstance(expected,str) or len(expected.encode()) > 65536:
                 raise ValueError('Invalid expected result')
             row['expected']=expected
+        if 'rational_expected' in step:
+            if 'expected' in step: raise ValueError('Conflicting verification gates')
+            evaluate(step['rational_expected'])
+            row['rational_expected']=step['rational_expected']
         nodes[name]=row
     if sum(s['max_tokens'] for s in nodes.values()) > budget:
         raise ValueError('Workflow exceeds token budget')
@@ -113,7 +118,7 @@ class WorkflowEngine:
                         data=json.loads(job['result'])
                         if not isinstance(data,dict) or not isinstance(data.get('content'),str):
                             change(name,'failed',job_id=current['job_id'],reason='invalid_result')
-                        elif 'expected' in spec and data['content'] != spec['expected']:
+                        elif ('expected' in spec and data['content'] != spec['expected']) or ('rational_expected' in spec and not verify_answer(data['content'],spec['rational_expected'])):
                             change(name,'failed',job_id=current['job_id'],reason='verification_failed')
                         else:
                             change(name,'succeeded',job_id=current['job_id'],result=job['result'])

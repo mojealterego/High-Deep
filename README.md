@@ -83,3 +83,60 @@ operator configuration: do not mix providers with incompatible data-handling
 policies. A failed request is not automatically replayed; a later independent
 job may be routed elsewhere. If no backend is available the existing worker
 marks that job failed. The metrics do not measure actual tokens or GPU usage.
+
+## Memory, symbolic verification and controlled policy evolution
+
+Memory is opt-in, tenant-scoped and persistent in the existing SQLite database.
+It supports lexical cosine ranking over normalized word counts, typed graph
+edges, bounded breadth-first traversal, chronological episodes and logical
+deletion. It does not implement learned embeddings, neural Engram, secure
+physical erasure or authenticated tenant identity.
+
+```sh
+ID=$(python3 -m highdeep memory-put --db jobs.db --tenant local --key note-1 "Model routing observations")
+python3 -m highdeep memory-search --db jobs.db --tenant local routing
+python3 -m highdeep memory-neighbors --db jobs.db --tenant local "$ID"
+python3 -m highdeep run --config backends.json --memory-db jobs.db --memory-tenant local --memory-query routing "Summarize routing"
+python3 -m highdeep symbolic '1/3+1/6'
+```
+
+A workflow step may specify `rational_expected` instead of `expected`.
+The verifier compares exact rational values using a restricted AST interpreter,
+with bounded length, nesting, operations and integer size. Calls, names,
+floating-point literals, powers and arbitrary Python execution are rejected.
+This proves arithmetic equality only, not general theorems. Retrieved memory
+is untrusted context, not a security boundary; only explicitly selected records
+are sent to a configured inference backend.
+
+For controlled evolution, initialize a policy, collect paired observations on
+trusted evaluation tasks, evaluate a candidate ordering, and explicitly use
+the promoted policy at runtime:
+
+```sh
+python3 -m highdeep evolve-init --db jobs.db --tenant local --config backends.json
+python3 -m highdeep evolve-collect --config backends.json --tasks evaluation.json > replay.json
+python3 -m highdeep evolve-status --db jobs.db --tenant local
+python3 -m highdeep evolve-promote --db jobs.db --tenant local --config backends.json --evidence replay.json --expected HEAD_SHA BACKEND_B BACKEND_A
+python3 -m highdeep evolve-verify --db jobs.db --tenant local
+python3 -m highdeep work-batch --db jobs.db --tenant local --worker local-1 --config backends.json --evolved-policy
+```
+
+Here HEAD_SHA is the evolution ledger head returned by evolve-status, not a Git
+commit. Backend names must be a complete permutation of the configured names.
+Evaluation tasks are JSON objects containing id, capability, max_tokens,
+prompt and exactly one trusted expected or rational_expected answer.
+The collector performs real HTTP inference, alternates backend ordering,
+and records measured wall-clock latency and checked correctness. It is bounded
+to 2,048 calls; operators should estimate provider costs before running it.
+The replay report requires no per-case correctness regression, at least four
+paired correct cases, at least 5% mean latency gain on jointly correct cases
+and at most 5% p95 latency regression. The policy and evidence fingerprints
+are bound to the configuration and a compare-and-swap ledger head.
+Repeated identical case sets are rejected, even when timings change.
+The local hash chain detects accidental edits but is neither signed nor
+externally anchored and cannot prove dataset independence or prevent a
+privileged database administrator from rewriting the complete ledger.
+The replay gate is a controlled configuration optimization, not autonomous
+source mutation, neural training, DGM or general recursive self-improvement.
+Production promotion requires representative, independently controlled cases
+and real model benchmarks; the integration tests use local HTTP fixtures.
